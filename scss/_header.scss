@@ -1,0 +1,118 @@
+@import "values";
+
+.header {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid $gray;
+  padding: 0 2.5%;
+  @include md {
+    padding: 0;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__left {
+    display: inline-block;
+    width: 10%;
+    order: 1;
+    margin: 5% 0 2% 0;
+  }
+  &__right {
+    position: relative;
+    width: 70%;
+    order: 2;
+    @include pc {
+      width: 30%;
+      order: 3;
+    }
+
+    .search-box {
+      position: absolute;
+      top: -8px;
+      right: 0;
+      z-index: 1;
+      width: 30px;
+      height: 30px;
+      border: none;
+      background: transparent;
+      @include pc {
+        top: 5px;
+      }
+      &::placeholder {
+        opacity: 0;
+      }
+
+      &:focus {
+        position: absolute;
+        top: -10px;
+        right: 15%;
+        width: 180px;
+        background: $white;
+        border-bottom: 0.5px solid $gray;
+        outline: none;
+        @include pc {
+          top: 0px;
+          width: 220px;
+        }
+        &::placeholder {
+          opacity: 1;
+        }
+      }
+    }
+    .search-submit {
+      position: absolute;
+      top: -8px;
+      right: 0;
+      font-family: 'Font Awesome\ 5 Free';
+      color: $blue;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      @include pc {
+        top: 0px;
+      }
+      @include md {
+        top: 0px;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &__center {
+    width: 100%;
+    order: 3;
+    @include pc {
+      width: 60%;
+      order: 2;
+      margin: 5% 0 2% 0;
+    }
+  }
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 5% 0;
+    @include pc {
+      justify-content: flex-start;
+      margin: 0 0 0 5%;
+    }
+    @include md {
+      justify-content: flex-start;
+      margin: 3% 0;
+    }
+    & > li {
+      @include pc {
+        margin: 0 3%;
+      }
+      @include md {
+        margin-right: 5%;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+//common
+@import "normalize";
+@import "values";
+@import "global";
+@import "typography";
+
+//components
+@import "header";
+@import "pagenation";
+@import "footer";
+
+//main
+@import "post-thumbnail";
+@import "single";
+@import "gallery-top";
+@import "gallery-single";
+@import "about";
+@import "contact";

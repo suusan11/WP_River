@@ -1,0 +1,22 @@
+.gallery {
+  &--title {
+    margin-top: 15%;
+  }
+  &--intro {
+    font-size: 10px;
+    font-weight: $font-weight-light;
+    margin-bottom: 15%;
+    @include pc {
+      font-size: 16px;
+    }
+    @include md {
+      font-size: 16px;
+    }
+  }
+  &--items {
+    margin-top: 10%;
+  }
+  &--item {
+    margin: 3% 0;
+  }
+}

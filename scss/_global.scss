@@ -1,0 +1,116 @@
+@import "values", "typography", "mixin";
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $white;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+}
+
+
+//common fonts style
+h1 {
+  font-family: $font-serif;
+  font-size: 20px;
+  font-weight: $font-weight-medium;
+  @include pc {
+    font-size: 25px;
+  }
+  @include md {
+    font-size: 25px;
+  }
+}
+h2 {
+  font-family: $font-serif;
+  font-size: 18px;
+  font-weight: $font-weight-medium;
+  @include pc {
+    font-size: 23px;
+  }
+  @include md {
+    font-size: 23px;
+  }
+}
+p {
+  font-family: $font-sanserif;
+  font-size: 13px;
+  @include pc {
+    font-size: 18px;
+  }
+  @include md {
+    font-size: 18px;
+  }
+}
+a {
+  text-decoration: none;
+  color: $black;
+  cursor: pointer;
+}
+li {
+  font-family: $font-serif;
+  font-size: 13px;
+  @include pc {
+    font-size: 20px;
+  }
+  @include md {
+    font-size: 20px;
+  }
+}
+
+//common style
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.container-pc {
+  @include pc {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.main__header {
+  position: relative;
+  font-size: 15px;
+  color: $red;
+  margin: 10% 0;
+  @include pc {
+    font-size: 20px;
+  }
+  @include md {
+    font-size: 20px;
+  }
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    content: '';
+    display: block;
+    border-top: 1px solid $red;
+    width: 150px;
+    margin-left: 5%;
+    @include pc {
+      left: 50px;
+      width: 215px;
+    }
+    @include md {
+      left: 50px;
+      width: 215px;
+    }
+  }
+}

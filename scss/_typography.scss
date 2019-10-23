@@ -1,0 +1,24 @@
+@import "values";
+// _typography.scss defined everything about font-family
+
+// font-family
+@import url('https://fonts.googleapis.com/css?family=Be+Vietnam:300,400,500,600,700|EB+Garamond:400,500,600,700&display=swap');
+
+$font-serif: 'EB Garamond', serif;
+$font-sanserif: 'Be Vietnam', sans-serif;
+
+//font-weight
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-wright-semibold: 600;
+$font-weight-bold: 700;
+
+html {
+  font-family: $font-serif;
+  line-height: 1.2;
+  font-weight: $font-weight-regular;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-variant-ligatures: common-ligatures;
+  color: $black;
+}

@@ -1,0 +1,57 @@
+.contact {
+  margin-bottom: 15%;
+
+  &__text {
+    font-weight: $font-weight-light;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+  }
+  &__form {
+    margin: 10% 0;
+    input,
+    textarea {
+      width: 100%;
+      border: 0.5px solid $black;
+      padding: 7px 10px 10px 10px;
+      margin: 5% 0;
+      outline: none;
+      font-size: 100%;
+      font-family: $font-sanserif;
+      @include pc {
+        margin: 2% 0;
+      }
+      @include md {
+        margin: 2% 0;
+      }
+      &::placeholder {
+        font-family: $font-sanserif;
+        font-size: 13px;
+        color: $black;
+        opacity: 0.7;
+      }
+    }
+    input {
+      height: 50px;
+    }
+    textarea {
+      overflow: scroll;
+    }
+    button {
+      width: 40%;
+      height: 50px;
+      background-color: $red;
+      font-family: $font-sanserif;
+      font-size: 13px;
+      color: $white;
+      cursor: pointer;
+      @include pc {
+        width: 23%;
+        font-size: 18px;
+      }
+      @include md {
+        width: 23%;
+        font-size: 18px;
+      }
+    }
+  }
+}

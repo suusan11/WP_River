@@ -1,0 +1,128 @@
+.thumbnail__flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  .summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 420px;
+    background-color: $lightblue;
+    padding: 10%;
+    margin-top: 20%;
+    @include pc {
+      width: 45%;
+      height: auto;
+      padding: 5%;
+      margin: 10% 2.5% 0;
+    }
+    @include md {
+      height: auto;
+      margin: 10% 2.5% 0;
+    }
+
+    &__date {
+      width: 30%;
+      text-align: center;
+      margin-left: -7%;
+      &--item {
+        font-family: $font-serif;
+        margin: 0;
+        &.month,
+        &.day {
+          font-size: 16px;
+          @include pc {
+            font-size: 26px;
+          }
+          @include md {
+            font-size: 26px;
+          }
+        }
+        &.year {
+          font-size: 10px;
+          @include pc {
+            font-size: 16px;
+          }
+          @include md {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    &__text {
+      width: 70%;
+
+      &--category {
+        color: $red;
+        margin: 0;
+      }
+      &--title {
+        font-size: 20px;
+        font-weight: $font-weight-medium;
+        margin: 5% 0;
+        @include pc {
+          font-size: 32px;
+        }
+        @include md {
+          font-size: 32px;
+        }
+      }
+      &--intro {
+        font-size: 10px;
+        font-weight: $font-weight-light;
+        margin: 0;
+        @include pc {
+          font-size: 16px;
+        }
+        @include md {
+          font-size: 16px;
+        }
+      }
+      &--link-post {
+        font-size: 10px;
+        &::before {
+          display: inline-block;
+          content: "";
+          border-top: 0.5px solid $black;
+          width: 30%;
+          margin-right: 5%;
+          padding-bottom: 2%;
+        }
+        @include pc {
+          font-size: 16px;
+        }
+        @include md {
+          font-size: 16px;
+        }
+      }
+    }
+    img.post__image {
+      margin-top: 5%;
+    }
+
+    //new post layout only for pc
+    @include pc {
+      &.new-post {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+
+        .summary__date {
+          width: 5%;
+          margin-left: 0;
+        }
+        .summary__text {
+          width: 40%;
+        }
+        .post__image {
+          width: 50%;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

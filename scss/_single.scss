@@ -1,0 +1,131 @@
+.post {
+  position: relative;
+  width: 100%;
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__date {
+    width: 10%;
+    text-align: left;
+    @include pc {
+      margin-left: 0;
+    }
+    @include md {
+      margin-left: 0;
+    }
+    .text__center {
+      text-align: center;
+    }
+    &--item {
+      font-family: $font-serif;
+      margin: 0;
+      &.month,
+      &.day {
+        font-size: 16px;
+        @include pc {
+          font-size: 26px;
+        }
+        @include md {
+          font-size: 26px;
+        }
+      }
+      &.year {
+        font-size: 10px;
+        @include pc {
+          font-size: 16px;
+        }
+        @include md {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  &__text {
+    width: 80%;
+
+    &--title {
+      font-size: 20px;
+      font-weight: $font-weight-medium;
+      margin-top: 0;
+      @include pc {
+        font-size: 32px;
+      }
+    }
+    &--intro {
+      font-size: 10px;
+      font-weight: $font-weight-light;
+      margin: 0;
+      @include pc {
+        font-size: 16px;
+      }
+      @include md {
+        font-size: 16px;
+      }
+    }
+  }
+  &__image {
+    width: 100%;
+    margin: 10% 0;
+  }
+  &__sentence {
+  line-height: 1.8;
+  }
+  &__tags {
+    position: relative;
+    margin-top: 20%;
+    p {
+      margin-bottom: 0;
+    }
+    &--title {
+      color: $red;
+    }
+    &--wrap {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      p {
+        margin-right: 3%;
+        &::after {
+          content: ",";
+          display: inline;
+        }
+        &:last-child::after {
+          display: none;
+        }
+      }
+    }
+  }
+  .border__top {
+    border-top: 1px solid $red;
+    width: 100%;
+    margin-top: 20%;
+    @include md {
+      margin-top: 15%;
+    }
+  }
+  .border__bottom {
+    border-bottom: 1px solid $red;
+    width: 50%;
+    padding: 10px;
+    margin: 0 auto;
+  }
+}
+.link__posts {
+  margin: 20% 0;
+  p {
+    font-family: $font-serif;
+    margin-bottom: 0;
+  }
+  h2 {
+    margin: 5% 0 15% 0;
+    @include pc {
+      margin-bottom: 10%;
+    }
+    @include md {
+      margin-bottom: 10%;
+    }
+  }
+}

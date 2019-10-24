@@ -115,9 +115,30 @@ function river_widgets_init()
         'after_widget'  => '</section>',
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2>',
-    ));
+                ));
+    register_sidebar(array(
+            'name' => 'Footer_widget_sns',
+            'id' => 'footer_widget_sns',
+            'before_title'  => '<P class="footer__widet--header">',
+            'after_title'   => '</P>',
+        ));
+    register_sidebar(array(
+            'name' => esc_html__('Footer_widget_category'),
+            'id' => 'footer_widget_category',
+            'before_title'  => '<P class="footer__widet--header">',
+            'after_title'   => '</P>',
+                ));
+    register_sidebar(array(
+            'name' => esc_html__('Footer_widget_tags'),
+            'id' => 'footer_widget_tags',
+            'before_title'  => '<P class="footer__widet--header">',
+            'after_title'   => '</P>',
+        ));
 }
 add_action('widgets_init', 'river_widgets_init');
+
+
+
 
 /**
  * Enqueue scripts and styles.

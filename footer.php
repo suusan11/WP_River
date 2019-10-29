@@ -22,14 +22,13 @@
 			</div>
 		</div>
 		<div class="footer__widet--item center">
-			<div class="footer__widet--item-category">
-				<?php dynamic_sidebar('Footer_widget_category'); ?>
+			<div class="footer__widet--item-subscribe">
+				<?php dynamic_sidebar('Footer_widget_subscribe'); ?>
 			</div>
 		</div>
 		<div class="footer__widet--item right">
-			<div class="footer__widet--item-tags">
-				<?php dynamic_sidebar('Footer_widget_tags'); ?>
-				<p><a href="">brunch</a></p>
+		<div class="footer__widet--item-category">
+				<?php dynamic_sidebar('Footer_widget_category'); ?>
 			</div>
 		</div>
 	</div>

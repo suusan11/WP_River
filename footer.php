@@ -14,11 +14,11 @@
 <footer class="footer">
 	<div class="footer__widet">
 		<div class="footer__widet--item left">
-			<!-- <p class="footer__widet--header">Follow me</p> -->
+			<p class="footer__widet--header">Follow me</p>
 			<div class="footer__widet--item-sns">
-				<a href=""><i class="fab fa-twitter"></i></a>
-				<a href=""><i class="fab fa-facebook-f"></i></a>
-				<a href=""><i class="fab fa-instagram"></i></a>
+				<a target="_blank" href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
+				<a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+				<a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
 			</div>
 		</div>
 		<div class="footer__widet--item center">
@@ -29,6 +29,7 @@
 		<div class="footer__widet--item right">
 			<div class="footer__widet--item-tags">
 				<?php dynamic_sidebar('Footer_widget_tags'); ?>
+				<p><a href="">brunch</a></p>
 			</div>
 		</div>
 	</div>

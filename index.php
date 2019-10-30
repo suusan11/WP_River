@@ -46,46 +46,38 @@ $cats = $cats[0];
             href="<?php the_permalink(); ?>">Read more</a></p>
       </div>
       <?php
-                                        if (has_post_thumbnail()) :
-                                        the_post_thumbnail('thumbnail', array('class' => 'post__image'));
-                                            ?>
+        if (has_post_thumbnail()) :
+        the_post_thumbnail('thumbnail', array('class' => 'post__image'));
+            ?>
       <?php endif; ?>
     </div>
     <!--new post-->
 
     <div class="summary">
       <div class="summary__date">
-        <p class="summary__date--item month">Oct.</p>
-        <p class="summary__date--item day">7</p>
-        <p class="summary__date--item year">2018</p>
+        <p class="summary__date--item month"><?php echo get_the_date('M.'); ?>
+        </p>
+        <p class="summary__date--item day"><?php echo get_the_date('d'); ?>
+        </p>
+        <p class="summary__date--item year"><?php echo get_the_date('Y'); ?>
+        </p>
       </div>
       <div class="summary__text">
-        <p class="summary__text--category">Travel</p>
-        <h1 class="summary__text--title">Travel to London</h1>
-        <p class="summary__text--intro">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-          eirmod
-          tempor.</p>
-        <p class="summary__text--link-post"><a href="">Read more</a></p>
+        <p class="summary__text--category"><?php echo $cats -> cat_name; ?>
+          <h1 class="summary__text--title"><?php the_title(); ?>
+          </h1>
+          <p class="summary__text--intro"><?php the_excerpt(); ?>
+          </p>
+          <p class="summary__text--link-post"><a
+              href="<?php the_permalink(); ?>">Read more</a></p>
       </div>
-      <img class="post__image" src="./sample-images/photo-1505761671935-60b3a7427bad.jpeg" alt="post thumbnail">
+      <?php
+        if (has_post_thumbnail()) :
+        the_post_thumbnail('thumbnail', array('class' => 'post__image'));
+            ?>
+      <?php endif; ?>
     </div>
 
-    <div class="summary">
-      <div class="summary__date">
-        <p class="summary__date--item month">Oct.</p>
-        <p class="summary__date--item day">7</p>
-        <p class="summary__date--item year">2018</p>
-      </div>
-      <div class="summary__text">
-        <p class="summary__text--category">Travel</p>
-        <h1 class="summary__text--title">Travel to London</h1>
-        <p class="summary__text--intro">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-          eirmod
-          tempor.</p>
-        <p class="summary__text--link-post"><a href="">Read more</a></p>
-      </div>
-      <img class="post__image" src="./sample-images/photo-1505761671935-60b3a7427bad.jpeg" alt="post thumbnail">
-    </div>
     <?php
     endwhile;
         else :

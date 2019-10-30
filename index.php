@@ -15,46 +15,98 @@
 get_header();
 ?>
 
-<div id="primary" class="content-area">
-  <main id="main" class="site-main">
+<?php
+$cats = get_the_category();
+$cats = $cats[0];
+?>
 
+<main class="container">
+  <div class="thumbnail__flex">
     <?php
         if (have_posts()) :
+          while (have_posts()): the_post();?>
 
-            if (is_home() && ! is_front_page()) :
-                ?>
-    <header>
-      <h1 class="page-title screen-reader-text"><?php single_post_title(); ?>
-      </h1>
-    </header>
+    <div class="summary new-post">
+      <div class="summary__date">
+        <p class="summary__date--item month"><?php echo get_the_date('M.'); ?>
+        </p>
+        <p class="summary__date--item day"><?php echo get_the_date('d'); ?>
+        </p>
+        <p class="summary__date--item year"><?php echo get_the_date('Y'); ?>
+        </p>
+      </div>
+      <div class="summary__text">
+        <p class="summary__text--category"><?php echo $cats -> cat_name; ?>
+        </p>
+        <h1 class="summary__text--title"><?php echo get_the_title(); ?>
+        </h1>
+        <p class="summary__text--intro"><?php the_excerpt(); ?>
+        </p>
+        <p class="summary__text--link-post"><a
+            href="<?php the_permalink(); ?>">Read more</a></p>
+      </div>
+      <div class="post__image">
+        <?php
+                                        if (has_post_thumbnail()) :
+                                        the_post_thumbnail();
+                                            ?>
+      </div>
+      <?php endif; ?>
+    </div>
+    <!--new post-->
+
+    <div class="summary">
+      <div class="summary__date">
+        <p class="summary__date--item month">Oct.</p>
+        <p class="summary__date--item day">7</p>
+        <p class="summary__date--item year">2018</p>
+      </div>
+      <div class="summary__text">
+        <p class="summary__text--category">Travel</p>
+        <h1 class="summary__text--title">Travel to London</h1>
+        <p class="summary__text--intro">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+          eirmod
+          tempor.</p>
+        <p class="summary__text--link-post"><a href="">Read more</a></p>
+      </div>
+      <img class="post__image" src="./sample-images/photo-1505761671935-60b3a7427bad.jpeg" alt="post thumbnail">
+    </div>
+
+    <div class="summary">
+      <div class="summary__date">
+        <p class="summary__date--item month">Oct.</p>
+        <p class="summary__date--item day">7</p>
+        <p class="summary__date--item year">2018</p>
+      </div>
+      <div class="summary__text">
+        <p class="summary__text--category">Travel</p>
+        <h1 class="summary__text--title">Travel to London</h1>
+        <p class="summary__text--intro">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+          eirmod
+          tempor.</p>
+        <p class="summary__text--link-post"><a href="">Read more</a></p>
+      </div>
+      <img class="post__image" src="./sample-images/photo-1505761671935-60b3a7427bad.jpeg" alt="post thumbnail">
+    </div>
     <?php
-            endif;
-
-            /* Start the Loop */
-            while (have_posts()) :
-                the_post();
-
-                /*
-                 * Include the Post-Type-specific template for the content.
-                 * If you want to override this in a child theme, then include a file
-                 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-                 */
-                get_template_part('template-parts/content', get_post_type());
-
-            endwhile;
-
-            the_posts_navigation();
-
+    endwhile;
         else :
-
-            get_template_part('template-parts/content', 'none');
 
         endif;
         ?>
+  </div>
 
-  </main><!-- #main -->
-</div><!-- #primary -->
+  <div class="pagenation">
+    <P><a href="">1</a></P>
+    <P><a href="">2</a></P>
+    <P><a href="">3</a></P>
+    <P><a href="">4</a></P>
+    <P><a href="">5</a></P>
+    <P><a href="">...</a></P>
+    <P><a href="">10</a></P>
+    <P><a href="">Next</a></P>
+
+</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

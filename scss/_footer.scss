@@ -5,18 +5,21 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 470px;
+    height: auto;
     background-color: $blue;
     padding: 5% 5%;
     @include pc {
       justify-content: space-between;
       align-items: flex-start;
-      height: 300px;
+      height: auto;
+    }
+    @include md {
+      height: auto;
     }
 
     &--header {
       font-family: $font-serif;
-      font-size: 15px;
+      font-size: 18px;
       @include pc {
         font-size: 20px;
       }
@@ -52,8 +55,12 @@
       &-sns .fab {
         color: $red;
         font-size: 20px;
-        margin-right: 10%;
-        margin-bottom: 10%;
+        margin-right: 5%;
+        margin-bottom: 2%;
+        @include pc {
+          margin-right: 10%;
+          margin-bottom: 10%;
+        }
 
         &.fa-instagram {
           font-weight: $font-weight-bold;
@@ -67,8 +74,10 @@
           flex-wrap: wrap;
           padding-left: 0;
         }
-        li {
-          margin: 0 0 5% 2%;
+        li.cat-item {
+          @include pc {
+            margin: 0 0 5% 2%;
+          }
           &::after {
             content: '/';
             display: inline;
@@ -102,18 +111,25 @@
             width: 23em;
             height: 45px;
             color: $gray;
-            font-size: 15px;
+            font-size: 13px;
+            font-weight: $font-weight-light;
             padding-left: 10px;
           }
           input[type=submit] {
             border: none;
             width: 100px;
-            height: 40px;
+            height: 50px;
             color: $white;
-            font-size: 15px;
+            font-size: 13px;
             background-color: $red;
             padding: 7px 13px;
             cursor: pointer;
+            @include pc {
+              font-size: 15px;
+            }
+            @include md {
+              font-size: 15px;
+            }
           }
         }
       }
@@ -128,6 +144,9 @@
       line-height: 38px;
       @include pc {
         font-size: 15px;
+      }
+      @include md {
+        font-size: 13px;
       }
     }
   }

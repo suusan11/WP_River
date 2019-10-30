@@ -434,7 +434,7 @@ a {
 
 li {
   font-family: "EB Garamond", serif;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 @media (min-width: 960px) {
@@ -767,7 +767,7 @@ html {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  height: 470px;
+  height: auto;
   background-color: #DBEAF1;
   padding: 5% 5%;
 }
@@ -780,13 +780,19 @@ html {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    height: 300px;
+    height: auto;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 959px) {
+  .footer__widet {
+    height: auto;
   }
 }
 
 .footer__widet--header {
   font-family: "EB Garamond", serif;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 @media (min-width: 960px) {
@@ -839,8 +845,15 @@ html {
 .footer__widet--item-sns .fab {
   color: #B27C76;
   font-size: 20px;
-  margin-right: 10%;
-  margin-bottom: 10%;
+  margin-right: 5%;
+  margin-bottom: 2%;
+}
+
+@media (min-width: 960px) {
+  .footer__widet--item-sns .fab {
+    margin-right: 10%;
+    margin-bottom: 10%;
+  }
 }
 
 .footer__widet--item-sns .fab.fa-instagram {
@@ -862,22 +875,24 @@ html {
   padding-left: 0;
 }
 
-.footer__widet--item-category li {
-  margin: 0 0 5% 2%;
+@media (min-width: 960px) {
+  .footer__widet--item-category li.cat-item {
+    margin: 0 0 5% 2%;
+  }
 }
 
-.footer__widet--item-category li::after {
+.footer__widet--item-category li.cat-item::after {
   content: '/';
   display: inline;
   color: #B27C76;
   padding: 0 5px;
 }
 
-.footer__widet--item-category li:last-child::after {
+.footer__widet--item-category li.cat-item:last-child::after {
   display: none;
 }
 
-.footer__widet--item-category li a {
+.footer__widet--item-category li.cat-item a {
   color: #B27C76;
 }
 
@@ -912,19 +927,32 @@ html {
   width: 23em;
   height: 45px;
   color: #C2C6C7;
-  font-size: 15px;
+  font-size: 13px;
+  font-weight: 300;
   padding-left: 10px;
 }
 
 .footer__widet--item-subscribe form input[type=submit] {
   border: none;
   width: 100px;
-  height: 40px;
+  height: 50px;
   color: #FFFFFF;
-  font-size: 15px;
+  font-size: 13px;
   background-color: #B27C76;
   padding: 7px 13px;
   cursor: pointer;
+}
+
+@media (min-width: 960px) {
+  .footer__widet--item-subscribe form input[type=submit] {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 959px) {
+  .footer__widet--item-subscribe form input[type=submit] {
+    font-size: 15px;
+  }
 }
 
 .footer__copy {
@@ -940,6 +968,12 @@ html {
 @media (min-width: 960px) {
   .footer__copy p {
     font-size: 15px;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 959px) {
+  .footer__copy p {
+    font-size: 13px;
   }
 }
 

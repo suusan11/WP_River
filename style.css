@@ -881,7 +881,7 @@ html {
   color: #B27C76;
 }
 
-.footer__widet--item-tags {
+.footer__widet--item-subscribe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -895,25 +895,36 @@ html {
       flex-wrap: wrap;
 }
 
-.footer__widet--item-tags p {
-  font-size: 10px;
-  border: 0.5px solid #5F5F5F;
-  margin: 0 5% 5% 0;
-  padding: 5px 10px;
+.footer__widet--item-subscribe form {
+  margin-top: -25px;
 }
 
-@media (min-width: 960px) {
-  .footer__widet--item-tags p {
-    font-size: 15px;
-    margin: 0 10px 10px 0;
-  }
+.footer__widet--item-subscribe form label {
+  display: none;
 }
 
-@media (min-width: 560px) and (max-width: 959px) {
-  .footer__widet--item-tags p {
-    font-size: 15px;
-    margin: 0 10px 10px 0;
-  }
+.footer__widet--item-subscribe form p {
+  margin-top: 0;
+}
+
+.footer__widet--item-subscribe form input[type=email] {
+  border: none;
+  width: 300px;
+  height: 45px;
+  color: #C2C6C7;
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.footer__widet--item-subscribe form input[type=submit] {
+  border: none;
+  width: 100px;
+  height: 40px;
+  color: #FFFFFF;
+  font-size: 15px;
+  background-color: #B27C76;
+  padding: 7px 13px;
+  cursor: pointer;
 }
 
 .footer__copy {

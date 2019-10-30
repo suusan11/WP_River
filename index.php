@@ -45,12 +45,10 @@ $cats = $cats[0];
         <p class="summary__text--link-post"><a
             href="<?php the_permalink(); ?>">Read more</a></p>
       </div>
-      <div class="post__image">
-        <?php
+      <?php
                                         if (has_post_thumbnail()) :
-                                        the_post_thumbnail();
+                                        the_post_thumbnail('thumbnail', array('class' => 'post__image'));
                                             ?>
-      </div>
       <?php endif; ?>
     </div>
     <!--new post-->

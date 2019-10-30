@@ -1135,6 +1135,7 @@ html {
 
 .thumbnail__flex .summary img.post__image {
   margin-top: 5%;
+  height: auto;
 }
 
 @media (min-width: 960px) {
@@ -1160,6 +1161,9 @@ html {
   }
   .thumbnail__flex .summary.new-post .post__image {
     width: 50%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
     margin-bottom: 0;
   }
 }

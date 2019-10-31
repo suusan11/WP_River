@@ -24,9 +24,9 @@ $cat_name = $cats[0]->cat_name;
   <div class="thumbnail__flex">
     <?php
         if (have_posts()) :
-          while (have_posts()): the_post(); $counter++; ?>
+          while (have_posts()): the_post(); ?>
 
-    <?php if ($counter <= 1): ?>
+    <?php if (is_first()): ?>
     <div class="summary new-post">
       <div class="summary__date">
         <p class="summary__date--item month"><?php echo get_the_date('M.'); ?>

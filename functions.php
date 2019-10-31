@@ -150,3 +150,11 @@ function river_scripts()
     // }
 }
 add_action('wp_enqueue_scripts', 'river_scripts');
+
+
+/** Enable to check whether new post or not **/
+function is_first()
+{
+    global $wp_query;
+    return ($wp_query->current_post === 0);
+}

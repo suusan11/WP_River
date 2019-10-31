@@ -17,7 +17,7 @@ get_header();
 
 <?php
 $cats = get_the_category();
-$cats = $cats[0];
+$cat_name = $cats[0]->cat_name;
 ?>
 
 <main class="container">
@@ -36,26 +36,31 @@ $cats = $cats[0];
         </p>
       </div>
       <div class="summary__text">
-        <p class="summary__text--category"><?php echo $cats -> cat_name; ?>
+        <p class="summary__text--category"><?php echo $cat_name; ?>
         </p>
-        <h1 class="summary__text--title"><?php echo get_the_title(); ?>
-        </h1>
+        <a href="<?php the_permalink(); ?>">
+          <h1 class="summary__text--title"><?php echo get_the_title(); ?>
+          </h1>
+        </a>
         <p class="summary__text--intro"><?php the_excerpt(); ?>
         </p>
         <p class="summary__text--link-post"><a
             href="<?php the_permalink(); ?>">Read more</a></p>
       </div>
-      <?php
+      <a class="post__image" href="<?php the_permalink(); ?>">
+        <?php
         if (has_post_thumbnail()) :
-        the_post_thumbnail('thumbnail', array('class' => 'post__image'));
+        the_post_thumbnail();
             ?>
+      </a>
       <?php endif; ?>
     </div>
     <!--new post-->
 
     <div class="summary">
       <div class="summary__date">
-        <p class="summary__date--item month"><?php echo get_the_date('M.'); ?>
+        <p class="summary__date--item month">
+          <?php echo get_the_date('M.'); ?>
         </p>
         <p class="summary__date--item day"><?php echo get_the_date('d'); ?>
         </p>
@@ -63,18 +68,22 @@ $cats = $cats[0];
         </p>
       </div>
       <div class="summary__text">
-        <p class="summary__text--category"><?php echo $cats -> cat_name; ?>
-          <h1 class="summary__text--title"><?php the_title(); ?>
-          </h1>
+        <p class="summary__text--category"><?php echo $cat_name; ?>
+          <a href="<?php the_permalink(); ?>">
+            <h1 class="summary__text--title"><?php the_title(); ?>
+            </h1>
+          </a>
           <p class="summary__text--intro"><?php the_excerpt(); ?>
           </p>
           <p class="summary__text--link-post"><a
               href="<?php the_permalink(); ?>">Read more</a></p>
       </div>
-      <?php
+      <a class="post__image" href="<?php the_permalink(); ?>">
+        <?php
         if (has_post_thumbnail()) :
         the_post_thumbnail('thumbnail', array('class' => 'post__image'));
             ?>
+      </a>
       <?php endif; ?>
     </div>
 

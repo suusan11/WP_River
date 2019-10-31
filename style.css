@@ -1133,9 +1133,20 @@ html {
   }
 }
 
-.thumbnail__flex .summary img.post__image {
+.thumbnail__flex .summary__text--link-post a:hover {
+  color: #B27C76;
+}
+
+.thumbnail__flex .summary .post__image {
   margin-top: 5%;
+}
+
+.thumbnail__flex .summary .post__image img {
   height: auto;
+}
+
+.thumbnail__flex .summary .post__image img:hover {
+  opacity: 0.8;
 }
 
 @media (min-width: 960px) {
@@ -1161,10 +1172,15 @@ html {
   }
   .thumbnail__flex .summary.new-post .post__image {
     width: 50%;
+    margin-bottom: 0;
+  }
+  .thumbnail__flex .summary.new-post .post__image img {
     height: auto;
     -o-object-fit: cover;
        object-fit: cover;
-    margin-bottom: 0;
+  }
+  .thumbnail__flex .summary.new-post .post__image img:hover {
+    opacity: 0.8;
   }
 }
 

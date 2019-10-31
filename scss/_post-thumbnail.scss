@@ -69,7 +69,7 @@
           font-size: 32px;
         }
       }
-      &--intro {
+      &--intro p {
         font-size: 10px;
         font-weight: $font-weight-light;
         margin: 0;
@@ -96,10 +96,20 @@
         @include md {
           font-size: 16px;
         }
+        a:hover {
+          color: $red;
+        }
       }
     }
-    img.post__image {
+    .post__image {
       margin-top: 5%;
+
+      img {
+        height: auto;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
     }
 
     //new post layout only for pc
@@ -118,9 +128,17 @@
         .summary__text {
           width: 40%;
         }
-        .post__image {
+        .post__image  {
           width: 50%;
           margin-bottom: 0;
+
+          img {
+            height: auto;
+            object-fit: cover;
+            &:hover {
+              opacity: 0.8;
+            }
+          }
         }
       }
     }

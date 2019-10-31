@@ -998,9 +998,9 @@ html {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  height: 420px;
+  height: auto;
   background-color: #F3F7F8;
-  padding: 10%;
+  padding: 10% 10% 5% 10%;
   margin-top: 20%;
 }
 
@@ -1008,7 +1008,7 @@ html {
   .thumbnail__flex .summary {
     width: 45%;
     height: auto;
-    padding: 5%;
+    padding: 5% 5% 3% 5%;
     margin: 10% 2.5% 0;
   }
 }

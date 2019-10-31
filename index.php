@@ -42,8 +42,8 @@ $cat_name = $cats[0]->cat_name;
           <h1 class="summary__text--title"><?php echo get_the_title(); ?>
           </h1>
         </a>
-        <p class="summary__text--intro"><?php the_excerpt(); ?>
-        </p>
+        <div class="summary__text--intro"><?php the_excerpt(); ?>
+        </div>
         <p class="summary__text--link-post"><a
             href="<?php the_permalink(); ?>">Read more</a></p>
       </div>
@@ -73,8 +73,8 @@ $cat_name = $cats[0]->cat_name;
             <h1 class="summary__text--title"><?php the_title(); ?>
             </h1>
           </a>
-          <p class="summary__text--intro"><?php the_excerpt(); ?>
-          </p>
+          <div class="summary__text--intro"><?php the_excerpt(); ?>
+          </div>
           <p class="summary__text--link-post"><a
               href="<?php the_permalink(); ?>">Read more</a></p>
       </div>

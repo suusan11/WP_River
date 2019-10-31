@@ -15,11 +15,6 @@
 get_header();
 ?>
 
-<?php
-$cats = get_the_category();
-$cat_name = $cats[0]->cat_name;
-?>
-
 <main class="container">
   <div class="thumbnail__flex">
     <?php
@@ -37,7 +32,11 @@ $cat_name = $cats[0]->cat_name;
         </p>
       </div>
       <div class="summary__text">
-        <p class="summary__text--category"><?php echo $cat_name; ?>
+        <p class="summary__text--category"><?php
+foreach ((get_the_category()) as $cat) {
+              echo $cat->cat_name . ' ';
+          }
+?>
         </p>
         <a href="<?php the_permalink(); ?>">
           <h1 class="summary__text--title"><?php echo get_the_title(); ?>
@@ -70,7 +69,11 @@ $cat_name = $cats[0]->cat_name;
         </p>
       </div>
       <div class="summary__text">
-        <p class="summary__text--category"><?php echo $cat_name; ?>
+        <p class="summary__text--category"><?php
+foreach ((get_the_category()) as $cat) {
+                echo $cat->cat_name . ' ';
+            }
+?>
           <a href="<?php the_permalink(); ?>">
             <h1 class="summary__text--title"><?php the_title(); ?>
             </h1>

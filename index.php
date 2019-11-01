@@ -101,15 +101,9 @@ foreach ((get_the_category()) as $cat) {
         ?>
   </div>
 
-  <div class="pagenation">
-    <P><a href="">1</a></P>
-    <P><a href="">2</a></P>
-    <P><a href="">3</a></P>
-    <P><a href="">4</a></P>
-    <P><a href="">5</a></P>
-    <P><a href="">...</a></P>
-    <P><a href="">10</a></P>
-    <P><a href="">Next</a></P>
+  <?php if (function_exists("the_pagination")) {
+            the_pagination();
+        } ?>
 
 </main><!-- #main -->
 

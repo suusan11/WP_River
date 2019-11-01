@@ -726,8 +726,22 @@ html {
   }
 }
 
-.pagenation {
+.pagination {
   width: 100%;
+  display: block;
+  text-align: center;
+  padding: 0 2.5%;
+  margin: 10% 0;
+}
+
+@media (min-width: 960px) {
+  .pagination {
+    width: 50%;
+    margin: 5% auto;
+  }
+}
+
+.pagination .page-numbers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -737,22 +751,15 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 2.5%;
-  margin: 10% 0;
 }
 
-@media (min-width: 960px) {
-  .pagenation {
-    width: 50%;
-    margin: 5% auto;
-  }
-}
-
-.pagenation p {
+.pagination .page-numbers li {
+  width: 40px;
+  height: 40px;
   font-family: "EB Garamond", serif;
 }
 
-.pagenation a:hover {
+.pagination .page-numbers li:hover {
   opacity: 0.8;
 }
 

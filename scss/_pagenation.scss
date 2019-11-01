@@ -1,18 +1,27 @@
-.pagenation {
+.pagination {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
+  text-align: center;
   padding: 0 2.5%;
   margin: 10% 0;
   @include pc {
     width: 50%;
     margin: 5% auto;
   }
-  p {
-    font-family: $font-serif;
-  }
-  a:hover {
-    opacity: 0.8;
+
+  .page-numbers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+      width: 40px;
+      height: 40px;
+      font-family: $font-serif;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 }

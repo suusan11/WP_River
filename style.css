@@ -1308,6 +1308,10 @@ html {
   line-height: 1.8;
 }
 
+.post__sentence img {
+  margin: 5% 0 3% 0;
+}
+
 .post__tags {
   position: relative;
   margin-top: 20%;

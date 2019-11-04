@@ -185,3 +185,19 @@ function the_pagination()
     ));
     echo '</div>';
 }
+
+/* custom post type */
+add_action('init', 'create_post_type');
+function create_post_type()
+{
+    register_post_type('gallery', [
+        'labels' => [
+            'name'          => 'Gallery', // name of post type on dashboard
+            'singular_name' => 'gallery',    // symbol name of post type
+        ],
+        'public'        => true,
+        'has_archive'   => true,
+        'menu_position' => 5,
+        'show_in_rest'  => true,  // abale to use Gutenberg
+    ]);
+}

@@ -15,8 +15,14 @@
   }
   &--items {
     margin-top: 10%;
-  }
-  &--item {
-    margin: 3% 0;
+
+    .wp-block-gallery {
+      display: block;
+
+      .blocks-gallery-item {
+        width: 100%;
+        margin: 10% 0;
+      }
+    }
   }
 }

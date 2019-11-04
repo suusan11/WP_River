@@ -1441,8 +1441,13 @@ html {
   margin-top: 10%;
 }
 
-.gallery--item {
-  margin: 3% 0;
+.gallery--items .wp-block-gallery {
+  display: block;
+}
+
+.gallery--items .wp-block-gallery .blocks-gallery-item {
+  width: 100%;
+  margin: 10% 0;
 }
 
 .about {

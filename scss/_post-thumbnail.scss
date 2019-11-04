@@ -11,16 +11,16 @@
     height: auto;
     background-color: $lightblue;
     padding: 10% 10% 5% 10%;
-    margin-top: 20%;
+    margin: 10% 0;
     @include pc {
       width: 45%;
       height: auto;
       padding: 5% 5% 3% 5%;
-      margin: 10% 2.5% 0;
+      margin: 5% 2.5%;
     }
     @include md {
       height: auto;
-      margin: 10% 2.5% 0;
+      margin: 5% 2.5%;
     }
 
     &__date {

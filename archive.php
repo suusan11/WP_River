@@ -10,44 +10,106 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<main class="container">
+	<h2 class="archive_title">Category: <span><?php
+foreach ((get_the_category()) as $cat) {
+    echo $cat->cat_name . ' ';
+}
+?>
+		</span>
+	</h2>
+	<div class="thumbnail__flex">
+		<?php
+        if (have_posts()) :
+          while (have_posts()): the_post(); ?>
 
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
+		<?php if (is_first()): ?>
+		<div class="summary new-post">
+			<div class="summary__date">
+				<p class="summary__date--item month"><?php echo get_the_date('M.'); ?>
+				</p>
+				<p class="summary__date--item day"><?php echo get_the_date('d'); ?>
+				</p>
+				<p class="summary__date--item year"><?php echo get_the_date('Y'); ?>
+				</p>
+			</div>
+			<div class="summary__text">
+				<p class="summary__text--category"><?php
+foreach ((get_the_category()) as $cat) {
+              echo $cat->cat_name . ' ';
+          }
+?>
+				</p>
+				<a href="<?php the_permalink(); ?>">
+					<h1 class="summary__text--title"><?php echo get_the_title(); ?>
+					</h1>
+				</a>
+				<div class="summary__text--intro"><?php the_excerpt(); ?>
+				</div>
+				<p class="summary__text--link-post"><a
+						href="<?php the_permalink(); ?>">Read
+						more</a></p>
+			</div>
+			<a class="post__image" href="<?php the_permalink(); ?>">
 				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+        if (has_post_thumbnail()) :
+        the_post_thumbnail();
+            ?>
+			</a>
+			<?php endif; ?>
+		</div>
+		<!--new post-->
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+		<?php else: ?>
+		<div class="summary">
+			<div class="summary__date">
+				<p class="summary__date--item month">
+					<?php echo get_the_date('M.'); ?>
+				</p>
+				<p class="summary__date--item day"><?php echo get_the_date('d'); ?>
+				</p>
+				<p class="summary__date--item year"><?php echo get_the_date('Y'); ?>
+				</p>
+			</div>
+			<div class="summary__text">
+				<p class="summary__text--category"><?php
+foreach ((get_the_category()) as $cat) {
+                echo $cat->cat_name . ' ';
+            }
+?>
+					<a href="<?php the_permalink(); ?>">
+						<h1 class="summary__text--title"><?php the_title(); ?>
+						</h1>
+					</a>
+					<div class="summary__text--intro"><?php the_excerpt(); ?>
+					</div>
+					<p class="summary__text--link-post"><a
+							href="<?php the_permalink(); ?>">Read
+							more</a></p>
+			</div>
+			<a class="post__image" href="<?php the_permalink(); ?>">
+				<?php
+        if (has_post_thumbnail()) :
+        the_post_thumbnail('thumbnail', array('class' => 'post__image'));
+            ?>
+			</a>
+			<?php endif; ?>
+		</div>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+		<?php
+    endif;
+    endwhile;
+        else :
 
-			endwhile;
+        endif;
+        ?>
+	</div>
 
-			the_posts_navigation();
+	<?php if (function_exists("the_pagination")) {
+            the_pagination();
+        } ?>
 
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

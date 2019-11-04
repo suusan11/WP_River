@@ -509,6 +509,17 @@ img {
   }
 }
 
+.archive_title {
+  font-weight: 300;
+  margin: 5% 2.5% 0 2.5%;
+}
+
+.archive_title span {
+  font-family: "Be Vietnam", sans-serif;
+  font-weight: 300;
+  margin-left: 2%;
+}
+
 html {
   font-family: "EB Garamond", serif;
   line-height: 1.2;
@@ -1009,7 +1020,7 @@ html {
   height: auto;
   background-color: #F3F7F8;
   padding: 10% 10% 5% 10%;
-  margin-top: 20%;
+  margin: 10% 0;
 }
 
 @media (min-width: 960px) {
@@ -1017,14 +1028,14 @@ html {
     width: 45%;
     height: auto;
     padding: 5% 5% 3% 5%;
-    margin: 10% 2.5% 0;
+    margin: 5% 2.5%;
   }
 }
 
 @media (min-width: 560px) and (max-width: 959px) {
   .thumbnail__flex .summary {
     height: auto;
-    margin: 10% 2.5% 0;
+    margin: 5% 2.5%;
   }
 }
 

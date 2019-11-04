@@ -114,3 +114,14 @@ img {
     }
   }
 }
+
+.archive_title {
+  font-weight: $font-weight-light;
+  margin: 5% 2.5% 0 2.5%;
+
+  span {
+    font-family: $font-sanserif;
+    font-weight: $font-weight-light;
+    margin-left: 2%;
+  }
+}

@@ -16,7 +16,7 @@ get_header();
 <main class="gallery container container-pc">
   <h1 class="gallery--title"><?php echo get_the_title(); ?>
   </h1>
-  <p class="gallery--intro"><?php the_excerpt(); ?>
+  <p class="gallery--intro"><?php echo get_the_excerpt(); ?>
   </p>
   <div class="gallery--items">
     <?php the_content(); ?>

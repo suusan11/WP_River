@@ -199,5 +199,11 @@ function create_post_type()
         'has_archive'   => true,
         'menu_position' => 5,
         'show_in_rest'  => true,  // abale to use Gutenberg
+        'supports' => [
+            'title',
+            'editor',
+            'thumbnail',
+            'excerpt'
+        ]
     ]);
 }

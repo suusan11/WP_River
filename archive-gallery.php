@@ -23,9 +23,10 @@ get_header();
     if ($posts) : foreach ($posts as $post) : setup_postdata($post); ?>
 
   <div class="gallery__thumbnail">
-    <h1 class="gallery__thumbnail--title"><a
-        href="<?php the_permalink(); ?>"></a><?php echo get_the_title(); ?>
-    </h1>
+    <a href="<?php the_permalink(); ?>">
+      <h1 class="gallery__thumbnail--title"><?php echo get_the_title(); ?>
+      </h1>
+    </a>
     <p class="gallery__thumbnail--intro"><?php the_excerpt(); ?>
     </p>
     <a href="<?php the_permalink(); ?>">

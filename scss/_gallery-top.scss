@@ -1,13 +1,23 @@
 .gallery__thumbnail {
   margin: 15% 0;
-  &--intro {
+  
+  p {
     font-size: 19px;
     font-weight: $font-weight-light;
+
     @include pc {
       font-size: 16px;
     }
     @include md {
       font-size: 16px;
+    }
+  }
+  &--image {
+    height: auto;
+    margin-top: 2%;
+
+    &:hover {
+      opacity: 0.8;
     }
   }
 }

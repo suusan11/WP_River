@@ -67,10 +67,15 @@
   }
   &__image {
     width: 100%;
+    height: auto;
     margin: 10% 0;
   }
   &__sentence {
   line-height: 1.8;
+
+  img {
+    margin: 5% 0 3% 0;
+  }
   }
   &__tags {
     position: relative;

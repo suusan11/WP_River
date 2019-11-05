@@ -509,6 +509,17 @@ img {
   }
 }
 
+.archive_title {
+  font-weight: 300;
+  margin: 5% 2.5% 0 2.5%;
+}
+
+.archive_title span {
+  font-family: "Be Vietnam", sans-serif;
+  font-weight: 300;
+  margin-left: 2%;
+}
+
 html {
   font-family: "EB Garamond", serif;
   line-height: 1.2;
@@ -726,8 +737,22 @@ html {
   }
 }
 
-.pagenation {
+.pagination {
   width: 100%;
+  display: block;
+  text-align: center;
+  padding: 0 2.5%;
+  margin: 10% auto;
+}
+
+@media (min-width: 960px) {
+  .pagination {
+    width: 50%;
+    margin: 5% auto;
+  }
+}
+
+.pagination .page-numbers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -737,22 +762,16 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 2.5%;
-  margin: 10% 0;
+  padding: 0 10%;
 }
 
-@media (min-width: 960px) {
-  .pagenation {
-    width: 50%;
-    margin: 5% auto;
-  }
-}
-
-.pagenation p {
+.pagination .page-numbers li {
+  width: 40px;
+  height: 40px;
   font-family: "EB Garamond", serif;
 }
 
-.pagenation a:hover {
+.pagination .page-numbers li:hover {
   opacity: 0.8;
 }
 
@@ -998,25 +1017,25 @@ html {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  height: 420px;
+  height: auto;
   background-color: #F3F7F8;
-  padding: 10%;
-  margin-top: 20%;
+  padding: 10% 10% 5% 10%;
+  margin: 10% 0;
 }
 
 @media (min-width: 960px) {
   .thumbnail__flex .summary {
     width: 45%;
     height: auto;
-    padding: 5%;
-    margin: 10% 2.5% 0;
+    padding: 5% 5% 3% 5%;
+    margin: 5% 2.5%;
   }
 }
 
 @media (min-width: 560px) and (max-width: 959px) {
   .thumbnail__flex .summary {
     height: auto;
-    margin: 10% 2.5% 0;
+    margin: 5% 2.5%;
   }
 }
 
@@ -1292,11 +1311,16 @@ html {
 
 .post__image {
   width: 100%;
+  height: auto;
   margin: 10% 0;
 }
 
 .post__sentence {
   line-height: 1.8;
+}
+
+.post__sentence img {
+  margin: 5% 0 3% 0;
 }
 
 .post__tags {
@@ -1385,21 +1409,30 @@ html {
   margin: 15% 0;
 }
 
-.gallery__thumbnail--intro {
+.gallery__thumbnail p {
   font-size: 19px;
   font-weight: 300;
 }
 
 @media (min-width: 960px) {
-  .gallery__thumbnail--intro {
+  .gallery__thumbnail p {
     font-size: 16px;
   }
 }
 
 @media (min-width: 560px) and (max-width: 959px) {
-  .gallery__thumbnail--intro {
+  .gallery__thumbnail p {
     font-size: 16px;
   }
+}
+
+.gallery__thumbnail--image {
+  height: auto;
+  margin-top: 2%;
+}
+
+.gallery__thumbnail--image:hover {
+  opacity: 0.8;
 }
 
 .gallery--title {
@@ -1428,8 +1461,13 @@ html {
   margin-top: 10%;
 }
 
-.gallery--item {
-  margin: 3% 0;
+.gallery--items .wp-block-gallery {
+  display: block;
+}
+
+.gallery--items .wp-block-gallery .blocks-gallery-item {
+  width: 100%;
+  margin: 10% 0;
 }
 
 .about {

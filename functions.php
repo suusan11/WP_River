@@ -150,3 +150,60 @@ function river_scripts()
     // }
 }
 add_action('wp_enqueue_scripts', 'river_scripts');
+
+
+/** Enable to check whether new post or not **/
+function is_first()
+{
+    global $wp_query;
+    return ($wp_query->current_post === 0);
+}
+
+/* pageNation
+$paged: current page
+$pages: all pages
+$range: how many pages to left and right
+*/
+function the_pagination()
+{
+    global $wp_query;
+    $bignum = 999999999;
+    if ($wp_query->max_num_pages <= 1) {
+        return;
+    }
+    echo '<div class="pagination">';
+    echo paginate_links(array(
+        'base'         => str_replace($bignum, '%#%', esc_url(get_pagenum_link($bignum))),
+        'format'       => '',
+        'current'      => max(1, get_query_var('paged')),
+        'total'        => $wp_query->max_num_pages,
+        'prev_text'    => 'Prev',
+        'next_text'    => 'Next',
+        'type'         => 'list',
+        'end_size'     => 3,
+        'mid_size'     => 3
+    ));
+    echo '</div>';
+}
+
+/* custom post type */
+add_action('init', 'create_post_type');
+function create_post_type()
+{
+    register_post_type('gallery', [
+        'labels' => [
+            'name'          => 'Gallery', // name of post type on dashboard
+            'singular_name' => 'gallery',    // symbol name of post type
+        ],
+        'public'        => true,
+        'has_archive'   => true,
+        'menu_position' => 5,
+        'show_in_rest'  => true,  // abale to use Gutenberg
+        'supports' => [
+            'title',
+            'editor',
+            'thumbnail',
+            'excerpt'
+        ]
+    ]);
+}

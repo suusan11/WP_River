@@ -1409,21 +1409,30 @@ html {
   margin: 15% 0;
 }
 
-.gallery__thumbnail--intro {
+.gallery__thumbnail p {
   font-size: 19px;
   font-weight: 300;
 }
 
 @media (min-width: 960px) {
-  .gallery__thumbnail--intro {
+  .gallery__thumbnail p {
     font-size: 16px;
   }
 }
 
 @media (min-width: 560px) and (max-width: 959px) {
-  .gallery__thumbnail--intro {
+  .gallery__thumbnail p {
     font-size: 16px;
   }
+}
+
+.gallery__thumbnail--image {
+  height: auto;
+  margin-top: 2%;
+}
+
+.gallery__thumbnail--image:hover {
+  opacity: 0.8;
 }
 
 .gallery--title {

@@ -27,13 +27,12 @@ get_header();
       <h1 class="gallery__thumbnail--title"><?php echo get_the_title(); ?>
       </h1>
     </a>
-    <p class="gallery__thumbnail--intro"><?php the_excerpt(); ?>
-    </p>
+    <?php the_excerpt(); ?>
     <a href="<?php the_permalink(); ?>">
-      <<?php
+      <?php
         if (has_post_thumbnail()) :
-            the_post_thumbnail('thumbnail', array('class' => 'post__image')); ?>
-        <?php endif; ?>
+            the_post_thumbnail('thumbnail', array('class' => 'gallery__thumbnail--image')); ?>
+      <?php endif; ?>
     </a>
   </div>
 

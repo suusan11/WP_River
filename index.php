@@ -21,7 +21,7 @@ get_header();
         if (have_posts()) :
           while (have_posts()): the_post(); ?>
 
-    <?php if (is_first()): ?>
+    <?php if (is_first() && is_home() && !is_paged()): ?>
     <div class="summary new-post">
       <div class="summary__date">
         <p class="summary__date--item month"><?php echo get_the_date('M.'); ?>

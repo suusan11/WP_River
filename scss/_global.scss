@@ -116,12 +116,14 @@ img {
 }
 
 .archive_title {
+  color: $gray;
   font-weight: $font-weight-light;
   margin: 5% 2.5% 0 2.5%;
 
   span {
-    font-family: $font-sanserif;
+    color: $black;
+    font-family: $font-serif;
     font-weight: $font-weight-light;
-    margin-left: 2%;
+    margin-left: 1%;
   }
 }

@@ -510,14 +510,16 @@ img {
 }
 
 .archive_title {
+  color: #C2C6C7;
   font-weight: 300;
   margin: 5% 2.5% 0 2.5%;
 }
 
 .archive_title span {
-  font-family: "Be Vietnam", sans-serif;
+  color: #5F5F5F;
+  font-family: "EB Garamond", serif;
   font-weight: 300;
-  margin-left: 2%;
+  margin-left: 1%;
 }
 
 html {

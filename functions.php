@@ -207,3 +207,35 @@ function create_post_type()
         ]
     ]);
 }
+
+/* get <h2> tag inside of content */
+function get_h2()
+{
+    global $post;
+    preg_match_all('/<h[1-6]>.+<\/h[1-6]>/u', $post->post_content, $matches);
+    $matches_count = count($matches[0]);
+
+    if (empty($matches)) {
+        echo ' '; //doesn't have h2
+    } else {
+        for ($i = 0; $i < $matches_count; $i++) {
+            echo  $matches[0][$i];
+        }
+    }
+}
+
+/* get <p> tag inside of content */
+function get_p()
+{
+    global $post;
+    preg_match_all('/<p>.+<\/p>/u', $post->post_content, $matches);
+    $matches_count = count($matches[0]);
+
+    if (empty($matches)) {
+        echo ' '; //doesn't have p
+    } else {
+        for ($i = 0; $i < $matches_count; $i++) {
+            echo  $matches[0][$i];
+        }
+    }
+}

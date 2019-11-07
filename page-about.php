@@ -17,8 +17,9 @@ get_header();
   <div class="main__header">
     <p>About</p>
   </div>
-  <h2 class="profile__name"><?php the_title(); ?>
-  </h2>
+  <!-- <h2 class="profile__name"><?php the_title(); ?>
+  </h2> -->
+  <?php get_h2(); ?>
   <a href="<?php the_permalink(); ?>">
     <?php
         if (has_post_thumbnail()) :
@@ -26,7 +27,7 @@ get_header();
     <?php endif; ?>
   </a>
   <div class="profile__text">
-    <?php the_content(); ?>
+    <?php get_p(); ?>
   </div>
 </main>
 <?php

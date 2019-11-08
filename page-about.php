@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying aout page
+ * The template for displaying about page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -17,8 +17,7 @@ get_header();
   <div class="main__header">
     <p>About</p>
   </div>
-  <!-- <h2 class="profile__name"><?php the_title(); ?>
-  </h2> -->
+  <?php the_title(); ?>
   <?php get_h2(); ?>
   <a href="<?php the_permalink(); ?>">
     <?php

@@ -17,7 +17,6 @@ get_header();
   <div class="main__header">
     <p>About</p>
   </div>
-  <?php the_title(); ?>
   <?php get_h2(); ?>
   <a href="<?php the_permalink(); ?>">
     <?php

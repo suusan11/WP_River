@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying aout page
+ * The template for displaying contact page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -14,19 +14,17 @@ get_header();
   <div class="main__header">
     <p>Contact</p>
   </div>
-  <?php if (have_posts()):
-    while (have_posts()): the_post(); ?>
-  <p class="contact__text">Feel free to contact me about posts, me or anything! I’m happy to hear from you.</p>
-  <!-- <form class="contact__form" action="">
-    <input class="contact__form--text" type="text" placeholder="Name">
-    <input class="contact__form--text" type="text" placeholder="Email address">
-    <textarea name="" id="" cols="30" rows="10" placeholder="Messages"></textarea>
-    <button type="submit" name="submit">SEND</button>
-  </form> -->
-</main>
-<?php endwhile;
+  <?php
+    if (have_posts()) :
+        while (have_posts()): the_post(); ?>
+  <div class="contact__form">
+    <?php the_content(); ?>
+  </div>
+
+  <?php endwhile;
   else:
   endif;?>
+</main>
 
 <?php
 get_footer();

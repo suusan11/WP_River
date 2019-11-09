@@ -18,12 +18,10 @@ get_header();
     <p>About</p>
   </div>
   <?php get_h2(); ?>
-  <a href="<?php the_permalink(); ?>">
-    <?php
-        if (has_post_thumbnail()) :
-            the_post_thumbnail('thumbnail', array('class' => 'profile__image')); ?>
-    <?php endif; ?>
-  </a>
+  <?php
+      if (has_post_thumbnail()) :
+          the_post_thumbnail('thumbnail', array('class' => 'profile__image')); ?>
+  <?php endif; ?>
   <div class="profile__text">
     <?php get_p(); ?>
   </div>

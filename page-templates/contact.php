@@ -2,6 +2,8 @@
 /**
  * The template for displaying contact page
  *
+ * Template Name: contact
+ *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package River

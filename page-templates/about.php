@@ -2,6 +2,8 @@
 /**
  * The template for displaying about page
  *
+ * Template Name: about
+ *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package River

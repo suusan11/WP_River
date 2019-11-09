@@ -2,6 +2,8 @@
 /**
  * The template for displaying the page gallery
  *
+ * Template Name: gallery
+ *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package River
